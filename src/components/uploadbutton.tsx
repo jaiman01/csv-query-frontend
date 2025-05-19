@@ -20,6 +20,7 @@ const UploadButton = ({ onUploadSuccess }: UploadButtonProps) => {
       method: "POST",
       body: formData,
     });
+    console.log("API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
 
     const data = await res.json();
     alert(`Uploaded to: ${data.url}`);
